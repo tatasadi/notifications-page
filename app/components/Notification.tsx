@@ -46,7 +46,7 @@ const Notification: React.FC<NotificationProps> = ({
         return (
           <>
             has joined your group{" "}
-            <span className="text-primary-blue font-bold">
+            <span className="text-primary-blue cursor-pointer font-bold">
               {data.groupName}
             </span>
           </>
@@ -59,7 +59,7 @@ const Notification: React.FC<NotificationProps> = ({
         return (
           <>
             left the group{" "}
-            <span className="text-primary-blue font-bold">
+            <span className="text-primary-blue cursor-pointer font-bold">
               {data.groupName}
             </span>
           </>
@@ -83,7 +83,9 @@ const Notification: React.FC<NotificationProps> = ({
       <div>
         <div className="flex gap-6">
           <div className="text-sm">
-            <span className="font-bold">{name}</span>{" "}
+            <span className="hover:text-primary-blue cursor-pointer font-bold">
+              {name}
+            </span>{" "}
             <span className="text-neutral-dark-grayish-blue">
               {getNotificationText()}
             </span>
@@ -99,7 +101,7 @@ const Notification: React.FC<NotificationProps> = ({
           )}
         </div>
         {type === "privateMessage" && data.messageText && (
-          <p className="text-neutral-dark-grayish-blue mt-3 rounded-[0.3125rem] border p-4 text-sm font-medium leading-normal">
+          <p className="text-neutral-dark-grayish-blue hover:bg-neutral-light-grayish-blue-1 mt-3 cursor-pointer rounded-[0.3125rem] border p-4 text-sm font-medium leading-normal">
             {data.messageText}
           </p>
         )}

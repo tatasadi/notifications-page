@@ -103,7 +103,7 @@ export default function Home() {
             {notifications.filter((notification) => !notification.read).length}
           </div>
           <button
-            className="text-neutral-dark-grayish-blue ml-auto text-sm"
+            className="text-neutral-dark-grayish-blue hover:text-primary-blue ml-auto cursor-pointer text-sm"
             onClick={markAllAsRead}
           >
             Mark all as read
