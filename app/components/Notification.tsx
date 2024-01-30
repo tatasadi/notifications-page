@@ -37,7 +37,9 @@ const Notification: React.FC<NotificationProps> = ({
         return (
           <>
             reacted to your recent post{" "}
-            <span className="font-bold lg:ml-1">{data.postName}</span>
+            <span className="hover:text-primary-blue cursor-pointer font-bold lg:ml-1">
+              {data.postName}
+            </span>
           </>
         )
       case "follow":

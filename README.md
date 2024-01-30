@@ -1,7 +1,6 @@
 # Notifications page
 
-This is a solution to the [Notifications page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/notifications-page-DqK5QAmKbC). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
-
+This is a solution to the [Notifications page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/notifications-page-DqK5QAmKbC). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -30,7 +29,12 @@ Users should be able to:
 
 ### Screenshots
 
+Deskotp:
+
 ![](./screenshot1.png)
+
+Mobile:
+
 ![](./screenshot2.png)
 
 ### Links
@@ -51,7 +55,7 @@ Users should be able to:
 
 ### Implementation time
 
-This challenge was completed over a span of 4 hours.
+This challenge was completed over a span of 2 hours.
 
 ## Author
 
