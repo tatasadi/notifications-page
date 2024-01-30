@@ -37,7 +37,7 @@ const Notification: React.FC<NotificationProps> = ({
         return (
           <>
             reacted to your recent post{" "}
-            <span className="font-bold">{data.postName}</span>
+            <span className="font-bold lg:ml-1">{data.postName}</span>
           </>
         )
       case "follow":
@@ -46,7 +46,7 @@ const Notification: React.FC<NotificationProps> = ({
         return (
           <>
             has joined your group{" "}
-            <span className="text-primary-blue cursor-pointer font-bold">
+            <span className="text-primary-blue cursor-pointer font-bold lg:ml-1">
               {data.groupName}
             </span>
           </>
@@ -59,7 +59,7 @@ const Notification: React.FC<NotificationProps> = ({
         return (
           <>
             left the group{" "}
-            <span className="text-primary-blue cursor-pointer font-bold">
+            <span className="text-primary-blue cursor-pointer font-bold lg:ml-1">
               {data.groupName}
             </span>
           </>
@@ -71,19 +71,19 @@ const Notification: React.FC<NotificationProps> = ({
 
   return (
     <div
-      className={`flex gap-3 rounded-lg p-4 ${
+      className={`flex gap-3 rounded-lg p-4 lg:gap-4 ${
         read ? "white" : "bg-neutral-very-light-grayish-blue"
       }`}
     >
       <div>
-        <div className="h-[2.4375rem] w-[2.4375rem]">
+        <div className="h-[2.4375rem] w-[2.4375rem] lg:h-[2.8125rem] lg:w-[2.8125rem]">
           <Image src={avatar} alt={name} className="rounded-full border " />
         </div>
       </div>
       <div>
         <div className="flex gap-6">
-          <div className="text-sm">
-            <span className="hover:text-primary-blue cursor-pointer font-bold">
+          <div className="text-sm lg:text-base">
+            <span className="hover:text-primary-blue cursor-pointer font-bold lg:mr-1">
               {name}
             </span>{" "}
             <span className="text-neutral-dark-grayish-blue">
@@ -101,7 +101,7 @@ const Notification: React.FC<NotificationProps> = ({
           )}
         </div>
         {type === "privateMessage" && data.messageText && (
-          <p className="text-neutral-dark-grayish-blue hover:bg-neutral-light-grayish-blue-1 mt-3 cursor-pointer rounded-[0.3125rem] border p-4 text-sm font-medium leading-normal">
+          <p className="text-neutral-dark-grayish-blue hover:bg-neutral-light-grayish-blue-1 mt-3 cursor-pointer rounded-[0.3125rem] border p-4 text-sm font-medium leading-normal lg:text-base">
             {data.messageText}
           </p>
         )}

@@ -93,17 +93,17 @@ export default function Home() {
   }
 
   return (
-    <main className="flex h-full min-h-screen w-full max-w-7xl flex-col items-center lg:min-h-0">
-      <div className="flex w-full flex-col gap-6 bg-white px-4 py-6">
+    <main className="flex h-full min-h-screen w-full max-w-[45.625rem] flex-col items-center lg:min-h-0">
+      <div className="flex w-full flex-col gap-6 bg-white px-4 py-6 shadow-[0_20px_60px_0_rgba(73,97,168,0.05)] lg:rounded-[0.9375rem]">
         <div className="flex items-center gap-2">
-          <h1 className="text-xl font-extrabold leading-normal">
+          <h1 className="text-xl font-extrabold leading-normal lg:text-2xl">
             Notifications
           </h1>
           <div className="bg-primary-blue rounded-md px-3 py-1 font-extrabold text-white">
             {notifications.filter((notification) => !notification.read).length}
           </div>
           <button
-            className="text-neutral-dark-grayish-blue hover:text-primary-blue ml-auto cursor-pointer text-sm"
+            className="text-neutral-dark-grayish-blue hover:text-primary-blue ml-auto cursor-pointer text-sm lg:text-base"
             onClick={markAllAsRead}
           >
             Mark all as read
