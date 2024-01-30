@@ -82,8 +82,8 @@ const Notification: React.FC<NotificationProps> = ({
           <Image src={avatar} alt={name} className="rounded-full border " />
         </div>
       </div>
-      <div>
-        <div className="flex gap-6">
+      <div className="w-full">
+        <div className="flex w-full gap-6">
           <div className="text-sm lg:text-base">
             <span className="hover:text-primary-blue cursor-pointer font-bold lg:mr-1">
               {name}
@@ -97,7 +97,7 @@ const Notification: React.FC<NotificationProps> = ({
             <p className="text-neutral-grayish-blue">{time}</p>
           </div>
           {type === "comment" && data.picture && (
-            <div className="w-[2.4375rem]">
+            <div className="ml-auto w-[2.4375rem] cursor-pointer">
               <Image src={data.picture} alt="Commented Picture" />
             </div>
           )}
