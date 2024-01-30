@@ -1,3 +1,4 @@
+"use client"
 import Notification, { NotificationType } from "./components/Notification"
 import Reference from "./components/Reference"
 import avatarMarkWebber from "../public/images/avatar-mark-webber.webp"
@@ -8,8 +9,9 @@ import avatarKimberlySmith from "../public/images/avatar-kimberly-smith.webp"
 import avatarNathanPeterson from "../public/images/avatar-nathan-peterson.webp"
 import avatarAnnaKim from "../public/images/avatar-anna-kim.webp"
 import imageChess from "../public/images/image-chess.webp"
+import { useState } from "react"
 
-const notifications = [
+const initNotifications = [
   {
     avatar: avatarMarkWebber,
     name: "Mark Webber",
@@ -82,6 +84,14 @@ const notifications = [
 ]
 
 export default function Home() {
+  const [notifications, setNotifications] = useState(initNotifications)
+
+  const markAllAsRead = () => {
+    setNotifications((notifications) =>
+      notifications.map((notification) => ({ ...notification, read: true })),
+    )
+  }
+
   return (
     <main className="flex h-full min-h-screen w-full max-w-7xl flex-col items-center lg:min-h-0">
       <div className="flex w-full flex-col gap-6 bg-white px-4 py-6">
@@ -92,7 +102,10 @@ export default function Home() {
           <div className="bg-primary-blue rounded-md px-3 py-1 font-extrabold text-white">
             {notifications.filter((notification) => !notification.read).length}
           </div>
-          <button className="text-neutral-dark-grayish-blue ml-auto text-sm">
+          <button
+            className="text-neutral-dark-grayish-blue ml-auto text-sm"
+            onClick={markAllAsRead}
+          >
             Mark all as read
           </button>
         </div>
