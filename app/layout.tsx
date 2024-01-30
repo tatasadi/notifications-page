@@ -28,7 +28,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${plusJakartaSans.className} bg-neutral-light flex min-h-screen flex-col items-center justify-center`}
+        className={`${plusJakartaSans.className} bg-neutral-light text-neutral-very-dark-blue flex min-h-screen flex-col items-center justify-center font-medium`}
       >
         {children}
       </body>
