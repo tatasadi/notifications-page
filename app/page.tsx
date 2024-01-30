@@ -93,7 +93,7 @@ export default function Home() {
   }
 
   return (
-    <main className="flex h-full min-h-screen w-full max-w-[45.625rem] flex-col items-center lg:min-h-0 lg:pt-32">
+    <main className="flex h-full min-h-screen w-full max-w-[45.625rem] flex-col items-center lg:min-h-0 lg:pt-[3.94rem]">
       <div className="flex w-full flex-col gap-6 bg-white px-4 py-6 shadow-[0_20px_60px_0_rgba(73,97,168,0.05)] lg:rounded-[0.9375rem]">
         <div className="flex items-center gap-2">
           <h1 className="text-xl font-extrabold leading-normal lg:text-2xl">
